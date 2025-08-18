@@ -1,11 +1,11 @@
-# BeatBranch
+# Beat Branch
 
 *A beginner-friendly machine learning project to classify music genres using only song title and artist name.*  
 
 ---
 
 ## Project Overview
-BeatBranch is a simple, introductory-level machine learning project that demonstrates how to:  
+Beat Branch is a simple, introductory-level machine learning project that demonstrates how to:  
 - Load and process a small dataset  
 - Extract text features using **TF-IDF**  
 - Train a **Decision Tree Classifier** to predict music genres  
@@ -19,7 +19,7 @@ This project is intentionally small and easy-to-run, making it perfect for learn
 
 ```
 
-BeatBranch/
+Beat-Branch/
 │
 ├── data/
 │   └── songs\_dataset.csv      # Small dataset of songs with title, artist, and genre
@@ -109,7 +109,7 @@ You can edit `src/predict.py` to test different songs manually.
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 * Python 3.8+
 * pandas
@@ -133,7 +133,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📌 Future Improvements
+## Future Improvements
 
 * Add more songs and genres to improve accuracy
 * Try other classifiers (Random Forest, SVM, etc.)
