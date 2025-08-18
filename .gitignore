@@ -1,86 +1,19 @@
-# .gitignore for BeatBranch (Python audio/ML project)
-
-# Byte-compiled / caches
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Distribution / packaging
-build/
-dist/
-eggs/
-*.egg-info/
-*.egg
-pip-wheel-metadata/
-*.whl
-
 # Virtual environments
 venv/
-env/
-.venv/
-ENV/
-env.bak/
-venv.bak/
+.env/
 
-# Python tools
-.pytest_cache/
-.coverage
-htmlcov/
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
-# Jupyter
+# Model files
+models/*.joblib
+
+# Jupyter notebooks
 .ipynb_checkpoints/
-*.ipynb
-
-# Data & large audio files (do NOT commit large datasets or raw audio)
-data/
-datasets/
-raw_audio/
-processed_audio/
-demo_audio/
-*.wav
-*.mp3
-*.flac
-
-# Models & serialized objects
-models/
-*.joblib
-*.pkl
-*.h5
-*.pt
-
-# Logs, temp files, caches
-*.log
-tmp/
-temp/
-.cache/
-.cache/**
-*.bak
-*.swp
-
-# IDEs / editors
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
 
 # OS files
 .DS_Store
 Thumbs.db
-
-# Streamlit
-.streamlit/
-
-# Environment / secrets
-.env
-*.env
-secrets.yaml
-
-# Optional: keep a small demo audio file/folder in repo
-# If you want to keep a small demo (e.g. demo_audio/sample.mp3),
-# remove or comment out the demo_audio/ and corresponding file patterns above.
-
-# Optional: Allow committing specific files
-# To allow committing a specific file under an ignored folder, use 'git add -f' or
-# create a tracked file (example: data/.gitkeep) and do NOT add it to .gitignore.
-
-# End of .gitignore
