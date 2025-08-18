@@ -138,3 +138,7 @@ pip install -r requirements.txt
 * Add more songs and genres to improve accuracy
 * Try other classifiers (Random Forest, SVM, etc.)
 * Build a simple web/app interface for predictions
+
+---
+
+## Designed & Built by Sanjit Chitturi.
