@@ -140,5 +140,3 @@ pip install -r requirements.txt
 * Build a simple web/app interface for predictions
 
 ---
-
-# Designed & Built by Sanjit Chitturi.
