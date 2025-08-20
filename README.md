@@ -1,82 +1,76 @@
 # Beat Branch
 
-*A beginner-friendly machine learning project to classify music genres using only song title and artist name.*  
+**A beginner-friendly machine learning project to classify music genres using just song title and artist name.**
+
+Beat Branch is a lightweight, beginner-level ML project that walks you through building a complete machine learning pipeline—from data processing to model training and prediction.
 
 ---
 
-## Project Overview
-Beat Branch is a simple, introductory-level machine learning project that demonstrates how to:  
-- Load and process a small dataset  
-- Extract text features using **TF-IDF**  
-- Train a **Decision Tree Classifier** to predict music genres  
-- Save and load trained models for later predictions  
+## Features
 
-This project is intentionally small and easy-to-run, making it perfect for learners who are new to machine learning and want to build their first end-to-end ML pipeline.  
+* Load and process a small song dataset
+* Extract text features using **TF-IDF**
+* Train a **Decision Tree Classifier** to predict music genres
+* Save and load trained models for later use
+* Simple, easy-to-run code for ML beginners
 
 ---
 
-## Repository Structure
+## Project Structure
 
 ```
-
 Beat-Branch/
 │
 ├── data/
-│   └── songs\_dataset.csv      # Small dataset of songs with title, artist, and genre
+│   └── songs_dataset.csv          # Dataset with song title, artist, and genre
 │
 ├── models/
-│   └── genre\_classifier.joblib  # Saved model after training (created after running train.py)
+│   └── genre_classifier.joblib    # Saved model (generated after training)
 │
 ├── src/
-│   ├── train.py               # Script to train and evaluate the model
-│   └── predict.py             # Script to make predictions with the saved model
+│   ├── train.py                   # Script to train the model
+│   └── predict.py                 # Script to make genre predictions
 │
-├── requirements.txt           # Python dependencies
-└── README.md                  # Project documentation
-
-````
+├── requirements.txt               # Python dependencies
+└── README.md                      # Project documentation
+```
 
 ---
 
-## Dataset
-The dataset is stored in `data/songs_dataset.csv` and contains **song title**, **artist name**, and **genre**. Example rows:  
+## Dataset Preview
 
-| title              | artist          | genre     |
-|--------------------|-----------------|-----------|
-| Blinding Lights    | The Weeknd      | Pop       |
-| Bohemian Rhapsody  | Queen           | Rock      |
-| Lose Yourself      | Eminem          | Hip-Hop   |
-| Für Elise          | Beethoven       | Classical |
-| Jolene             | Dolly Parton    | Country   |
+Stored in `data/songs_dataset.csv`:
+
+| title             | artist       | genre     |
+| ----------------- | ------------ | --------- |
+| Blinding Lights   | The Weeknd   | Pop       |
+| Bohemian Rhapsody | Queen        | Rock      |
+| Lose Yourself     | Eminem       | Hip-Hop   |
+| Für Elise         | Beethoven    | Classical |
+| Jolene            | Dolly Parton | Country   |
 
 ---
 
 ## Installation & Setup
 
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/sanjitchitturi/Beat-Branch.git
-   cd Beat-Branch
+```bash
+# 1. Clone the repository
+git clone https://github.com/sanjitchitturi/Beat-Branch.git
+cd Beat-Branch
 
-2. **Create a virtual environment**
+# 2. Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate       # Windows: venv\Scripts\activate
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # Windows: venv\Scripts\activate
-   ```
+# 3. Install dependencies
+pip install -r requirements.txt
+```
 
-3. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
 ---
 
-## Usage
+## Training the Model
 
-### 1. Train the model
-
-Run the training script to train the Decision Tree model and save it:
+Run the training script to train and save the model:
 
 ```bash
 python src/train.py
@@ -84,39 +78,39 @@ python src/train.py
 
 This will:
 
-* Train a Decision Tree on the dataset
+* Train a Decision Tree Classifier
 * Print a classification report
-* Save the model + vectorizer to `models/genre_classifier.joblib`
+* Save the model and vectorizer to `models/genre_classifier.joblib`
 
 ---
 
-### 2. Predict genres
+## Making Predictions
 
-Use the saved model to make predictions:
+Use the trained model to predict genres:
 
 ```bash
 python src/predict.py
 ```
 
-Example output:
+**Example Output:**
 
 ```
 Blinding Lights — The Weeknd  =>  Pop
 Jolene — Dolly Parton         =>  Country
 ```
 
-You can edit `src/predict.py` to test different songs manually.
+You can edit `src/predict.py` to test your own song inputs.
 
 ---
 
 ## Requirements
 
 * Python 3.8+
-* pandas
-* scikit-learn
-* joblib
+* `pandas`
+* `scikit-learn`
+* `joblib`
 
-Install them with:
+Install via:
 
 ```bash
 pip install -r requirements.txt
@@ -126,17 +120,23 @@ pip install -r requirements.txt
 
 ## How It Works
 
-1. **Feature Extraction:** Song title + artist name are combined into text and converted into a TF-IDF vector.
-2. **Model Training:** A Decision Tree classifier learns patterns from the text to predict genres.
-3. **Evaluation:** The script prints a classification report to evaluate accuracy.
-4. **Prediction:** The trained model is used to classify new songs into genres.
+1. **Feature Extraction**: Combines song title + artist into text and converts it to TF-IDF vectors.
+2. **Model Training**: A Decision Tree learns patterns to predict genres.
+3. **Evaluation**: Outputs classification report to measure performance.
+4. **Prediction**: Uses the saved model to predict genre for new songs.
 
 ---
 
 ## Future Improvements
 
-* Add more songs and genres to improve accuracy
-* Try other classifiers (Random Forest, SVM, etc.)
-* Build a simple web/app interface for predictions
+* Expand dataset with more songs & genres
+* Try other models (e.g., Random Forest, SVM)
+* Build a simple web or app interface
+
+---
+
+## Feedback & Contributions
+
+Feel free to fork, improve, or suggest changes via issues or pull requests!
 
 ---
