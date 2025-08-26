@@ -22,17 +22,17 @@ Beat Branch is a lightweight, beginner-level ML project that walks you through b
 Beat-Branch/
 │
 ├── data/
-│   └── songs_dataset.csv          # Dataset with song title, artist, and genre
+│   └── songs_dataset.csv
 │
 ├── models/
-│   └── genre_classifier.joblib    # Saved model (generated after training)
+│   └── genre_classifier.joblib
 │
 ├── src/
-│   ├── train.py                   # Script to train the model
-│   └── predict.py                 # Script to make genre predictions
+│   ├── train.py
+│   └── predict.py
 │
-├── requirements.txt               # Python dependencies
-└── README.md                      # Project documentation
+├── requirements.txt
+└── README.md
 ```
 
 ---
@@ -60,7 +60,7 @@ cd Beat-Branch
 
 # 2. Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate       # Windows: venv\Scripts\activate
+source venv/bin/activate
 
 # 3. Install dependencies
 pip install -r requirements.txt
@@ -132,11 +132,5 @@ pip install -r requirements.txt
 * Expand dataset with more songs & genres
 * Try other models (e.g., Random Forest, SVM)
 * Build a simple web or app interface
-
----
-
-## Feedback & Contributions
-
-Feel free to fork, improve, or suggest changes via issues or pull requests!
 
 ---
