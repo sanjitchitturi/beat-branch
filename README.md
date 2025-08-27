@@ -126,11 +126,3 @@ pip install -r requirements.txt
 4. **Prediction**: Uses the saved model to predict genre for new songs.
 
 ---
-
-## Future Improvements
-
-* Expand dataset with more songs & genres
-* Try other models (e.g., Random Forest, SVM)
-* Build a simple web or app interface
-
----
