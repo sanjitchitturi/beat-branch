@@ -1,31 +1,31 @@
 # Beat Branch
 
-**A beginner-friendly machine learning project to classify music genres using just song title and artist name.**
+A beginner-friendly machine learning project to classify music genres using just song title and artist name.
 
-Beat Branch is a lightweight, beginner-level ML project that walks you through building a complete machine learning pipeline—from data processing to model training and prediction.
+Beat Branch is a lightweight project that walks you through building a complete machine learning pipeline from data processing to model training, evaluation, and prediction.
 
 ---
 
 ## Features
 
-* Load and process a small song dataset
-* Extract text features using **TF-IDF**
-* Train a **Decision Tree Classifier** to predict music genres
-* Save and load trained models for later use
-* Simple, easy-to-run code for ML beginners
+- Load and process a small song dataset.
+- Extract text features using TF-IDF.  
+- Train a Decision Tree Classifier to predict music genres.
+- Evaluate with a classification report and confusion matrix plot.
+- Save and load trained models (pipeline with vectorizer and classifier). 
+- Predict genres via CLI inputs or built-in examples.
+- Simple, easy-to-run code for beginners. 
 
 ---
 
 ## Project Structure
 
 ```
+
 Beat-Branch/
 │
 ├── data/
-│   └── songs_dataset.csv
-│
-├── models/
-│   └── genre_classifier.joblib
+│   └── songs\_dataset.csv
 │
 ├── src/
 │   ├── train.py
@@ -33,7 +33,8 @@ Beat-Branch/
 │
 ├── requirements.txt
 └── README.md
-```
+
+````
 
 ---
 
@@ -41,17 +42,17 @@ Beat-Branch/
 
 Stored in `data/songs_dataset.csv`:
 
-| title             | artist       | genre     |
-| ----------------- | ------------ | --------- |
-| Blinding Lights   | The Weeknd   | Pop       |
-| Bohemian Rhapsody | Queen        | Rock      |
-| Lose Yourself     | Eminem       | Hip-Hop   |
-| Für Elise         | Beethoven    | Classical |
-| Jolene            | Dolly Parton | Country   |
+| title             | artist        | genre     |
+| ----------------- | ------------- | --------- |
+| Blinding Lights   | The Weeknd    | Pop       |
+| Bohemian Rhapsody | Queen         | Rock      |
+| Lose Yourself     | Eminem        | Hip-Hop   |
+| Für Elise         | Beethoven     | Classical |
+| Jolene            | Dolly Parton  | Country   |
 
 ---
 
-## Installation & Setup
+## Installation and Setup
 
 ```bash
 # 1. Clone the repository
@@ -60,17 +61,17 @@ cd Beat-Branch
 
 # 2. Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate   # On Windows: venv\Scripts\activate
 
 # 3. Install dependencies
 pip install -r requirements.txt
-```
+````
 
 ---
 
 ## Training the Model
 
-Run the training script to train and save the model:
+Run the training script:
 
 ```bash
 python src/train.py
@@ -78,37 +79,55 @@ python src/train.py
 
 This will:
 
-* Train a Decision Tree Classifier
-* Print a classification report
-* Save the model and vectorizer to `models/genre_classifier.joblib`
+* Train a Decision Tree Classifier on the dataset.
+* Split the data into train and test sets (80/20).
+* Print a classification report.
 
 ---
 
 ## Making Predictions
 
-Use the trained model to predict genres:
+You can predict genres in two ways:
+
+### 1. With CLI Inputs
+
+```bash
+python src/predict.py --title "Shape of You" --artist "Ed Sheeran"
+```
+
+Output:
+
+```
+Shape of You — Ed Sheeran => Pop
+```
+
+### 2. With Default Examples
+
+If no arguments are passed, the script predicts for built-in examples:
 
 ```bash
 python src/predict.py
 ```
 
-**Example Output:**
+Example Output:
 
 ```
 Blinding Lights — The Weeknd  =>  Pop
 Jolene — Dolly Parton         =>  Country
+Lose Yourself — Eminem        =>  Hip-Hop
+Hello — Adele                 =>  Pop
 ```
-
-You can edit `src/predict.py` to test your own song inputs.
 
 ---
 
 ## Requirements
 
 * Python 3.8+
-* `pandas`
-* `scikit-learn`
-* `joblib`
+* pandas
+* scikit-learn
+* joblib
+* matplotlib
+* seaborn
 
 Install via:
 
@@ -120,9 +139,9 @@ pip install -r requirements.txt
 
 ## How It Works
 
-1. **Feature Extraction**: Combines song title + artist into text and converts it to TF-IDF vectors.
+1. **Feature Extraction**: Combines song title and artist into text and converts it to TF-IDF vectors.
 2. **Model Training**: A Decision Tree learns patterns to predict genres.
-3. **Evaluation**: Outputs classification report to measure performance.
-4. **Prediction**: Uses the saved model to predict genre for new songs.
+3. **Evaluation**: Uses a train/test split, prints a classification report, and saves a confusion matrix plot.
+4. **Prediction**: Loads the saved pipeline to predict genres for new songs.
 
 ---
