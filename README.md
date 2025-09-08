@@ -1,6 +1,6 @@
 # Beat Branch
 
-A beginner-friendly machine learning project to classify music genres using just song title and artist name.
+A beginner friendly machine learning project to classify music genres using just song title and artist name.
 
 Beat Branch is a lightweight project that walks you through building a complete machine learning pipeline from data processing to model training, evaluation, and prediction.
 
@@ -22,10 +22,10 @@ Beat Branch is a lightweight project that walks you through building a complete 
 
 ```
 
-Beat-Branch/
+beat-branch/
 │
 ├── data/
-│   └── songs\_dataset.csv
+│   └── songs_dataset.csv
 │
 ├── src/
 │   ├── train.py
@@ -56,8 +56,8 @@ Stored in `data/songs_dataset.csv`:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/sanjitchitturi/Beat-Branch.git
-cd Beat-Branch
+git clone https://github.com/sanjitchitturi/beat-branch.git
+cd beat-branch
 
 # 2. Create and activate a virtual environment
 python -m venv venv
