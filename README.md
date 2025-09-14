@@ -1,7 +1,5 @@
 # Beat Branch
 
-A beginner friendly machine learning project to classify music genres using just song title and artist name.
-
 Beat Branch is a lightweight project that walks you through building a complete machine learning pipeline from data processing to model training, evaluation, and prediction.
 
 ---
@@ -61,7 +59,7 @@ cd beat-branch
 
 # 2. Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+source venv/bin/activate
 
 # 3. Install dependencies
 pip install -r requirements.txt
